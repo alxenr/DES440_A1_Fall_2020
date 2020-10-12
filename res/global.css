@@ -49,18 +49,24 @@ table {
 
 /* My styles begin*/
 /*Global styles being*/
-p{font-family: Lato;font-size: 18px;font-style: normal;font-weight: 400;line-height: 38px;letter-spacing: 0em;text-align: justified;}
-h1{font-family: Playfair Display;font-size: 48px;font-style: normal;font-weight: 400;line-height: 64px;text-align: center;}
-h2{font-family: Playfair Display;font-size: 36px;font-style: normal;font-weight: 400;line-height: 48px;text-align: center;}
-h3{font-family: Playfair Display;font-size: 24px;font-style: normal;font-weight: 400;line-height: 32px;text-align: center;}
-h4{font-family: Lato;font-size: 14px;font-style: normal;font-weight: 500;line-height: 27px;letter-spacing: 0.16em;text-align: center;}
-h5{font-family: Lato;font-size: 14px;font-style: normal;font-weight: 300;line-height: 27px;letter-spacing: 0.16em;text-align: center;}
+body{font-family:'Playfair Display','Arial','Helvetica','Roboto', sans-serif; font-size:min(max(0.8em, 1.2vw), 1.2em);} /*min(max(minimum value, responsive value), maximum value)*/
+p{font-family: Lato;font-size: 1.125em;font-style: normal;font-weight: 400;line-height: 1.9em;letter-spacing: 0em;text-align: justified;}
+h1{font-family: Playfair Display;font-size: 3em;font-style: normal;font-weight: 400;line-height: 1.33em;text-align: center;}
+h2{font-family: Playfair Display;font-size: 2.25em;font-style: normal;font-weight: 400;line-height: 1.33em;text-align: center;}
+h3{font-family: Playfair Display;font-size: 1.5em;font-style: normal;font-weight: 400;line-height: 1.33em;text-align: center;}
+h4{font-family: Lato;font-size: 0.875em;font-style: normal;font-weight: 500;line-height: 1.33em;letter-spacing: 0.16em;text-align: center;}
+h5{font-family: Lato;font-size: 0.875em;font-style: normal;font-weight: 300;line-height: 1.33em;letter-spacing: 0.16em;text-align: center;}
 h6{font-size:1.8em; line-height:1.8em; font-weight:bold; margin:0 0 0.8em 0;}
+ul{margin:0 0 0.8em 0; font-size: 1.125em;font-style: normal;font-weight: 400;line-height: 1.9em;letter-spacing: 0em;}
+ul li{margin:0 0 0 2em;}
+ol{margin:0 0 0.8em 0; font-size: 1.125em;font-style: normal;font-weight: 400;line-height: 1.9em;letter-spacing: 0em;}
+ol li{margin:0 0 0 2em;}
 /*Global stlyes end*/
 
-div.main_container{position:relative; padding:0; width:100%; background:#fff; margin:0 auto;}
-div.header{position:absolute; left:15vw;}
-svg.vogue_logo{width:200px;}
-div.nav_links{display:flex; justify-content:space-between; width:70vw; font-family: Lato;font-size: 18px;font-style: normal;font-weight: 300;line-height: 34px;letter-spacing: 0.16em;text-align: center;;}
-div.grid_container{position:absolute; top:300px; display:grid; grid-template-columns:1fr 1fr 1fr; margin:200px 15vw 0 15vw; grid-column-gap:1vw;}
-body{font-family:'Playfair Display','Arial','Helvetica','Roboto', sans-serif;}
+div.main_container{text-align:center;position:relative; padding:0; width:100%; background:#fff; margin:0 1vw;}
+div.header{position:absolute; left:15vw; padding:2vw 0 0 0;}
+svg.vogue_logo{width:12vw;margin:0 0 1vw 0;}
+div.nav_links{display:flex; justify-content:space-between; width:70vw; font-family: Lato;font-size: 1em;font-style: normal;font-weight: 300;line-height: 1.88em;letter-spacing: 0.16em;text-align: center;}
+div.content_container{margin:auto; display:inline;}
+div.grid_container{position:absolute; top:5vw; left:50%; transform:translateX(-50%); display:grid; grid-template-columns:1fr 1fr 1fr; margin:5vw 1vw 0 1vw; grid-column-gap:0vw; width:100%;}
+div.article_container{grid-column-start:1; grid-column-end:3; padding:0 0;}
