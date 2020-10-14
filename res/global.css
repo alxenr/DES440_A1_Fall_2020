@@ -49,7 +49,7 @@ table {
 
 /* My styles begin*/
 /*Global styles being*/
-body{font-family:'Playfair Display','Arial','Helvetica','Roboto', sans-serif; font-size:min(max(0.8em, 1.2vw), 1.2em);} /*min(max(minimum value, responsive value), maximum value)*/
+body{font-family:'Lato','Arial','Helvetica','Roboto', sans-serif; font-size:min(max(0.8em, 1.2vw), 1.2em);} /*min(max(minimum value, responsive value), maximum value)*/
 p{font-family: Lato;font-size: 1.125em;font-style: normal;font-weight: 400;line-height: 1.9em;letter-spacing: 0em;text-align: justified;}
 h1{font-family: Playfair Display;font-size: 3em;font-style: normal;font-weight: 400;line-height: 1.33em;text-align: center;}
 h2{font-family: Playfair Display;font-size: 2.25em;font-style: normal;font-weight: 400;line-height: 1.33em;text-align: center;}
@@ -63,10 +63,23 @@ ol{margin:0 0 0.8em 0; font-size: 1.125em;font-style: normal;font-weight: 400;li
 ol li{margin:0 0 0 2em;}
 /*Global stlyes end*/
 
-div.main_container{text-align:center;position:relative; padding:0; width:100%; background:#fff; margin:0 1vw;}
-div.header{position:absolute; left:15vw; padding:2vw 0 0 0;}
-svg.vogue_logo{width:12vw;margin:0 0 1vw 0;}
-div.nav_links{display:flex; justify-content:space-between; width:70vw; font-family: Lato;font-size: 1em;font-style: normal;font-weight: 300;line-height: 1.88em;letter-spacing: 0.16em;text-align: center;}
-div.content_container{margin:auto; display:inline;}
-div.grid_container{position:absolute; top:5vw; left:50%; transform:translateX(-50%); display:grid; grid-template-columns:1fr 1fr 1fr; margin:5vw 1vw 0 1vw; grid-column-gap:0vw; width:100%;}
-div.article_container{grid-column-start:1; grid-column-end:3; padding:0 0;}
+body{padding:0; margin:0;}
+div.main_container{position:relative; width:100%; background:#fff; margin:0 auto;}
+div.header_container{border-bottom:1px solid #000;}
+div.header{max-width:1000px; margin:0 auto; display:grid; grid-template-columns:2vw 1fr 2vw;}
+div.header a{grid-column-start:2; grid-column-end:3;}
+svg.vogue_logo{width:12vw;}
+div.header_navigation_links{grid-column-start:2; grid-column-end:3; display:flex; justify-content:space-between; font-size: 1em;font-style: normal;font-weight:300; line-height:1.88em; letter-spacing:0.16em; text-align:center;}
+div.body_container{min-height:400px;}
+div.body_grid{display:grid; max-width:1000px; grid-template-columns:2vw 1fr 1fr 1fr 2vw; margin:0 auto;}
+div.article_container{grid-column-start:2; grid-column-end:4;}
+
+@media only screen and (max-width: 600px) {
+	div.article_container{grid-column-end:5;}}
+
+
+
+
+/*div.content_container{margin:auto; display:grid; grid-template-columns:auto min(max(600px, 80vw), 1000px) auto;}
+div.grid_container{display:grid; grid-template-columns:1fr 1fr 1fr; grid-column-start:2; grid-column-end:3; margin:5vw 1vw 0 1vw; grid-column-gap:0vw; width:100%;}
+div.article_container{grid-column-start:1; grid-column-end:3; padding:0 0;}*/
