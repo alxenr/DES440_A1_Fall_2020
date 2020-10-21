@@ -54,7 +54,7 @@ p{font-family: Lato;font-size: 1.125em;font-style: normal;font-weight: 400;line-
 h1{font-family: Playfair Display;font-size: 3em;font-style: normal;font-weight: 400;line-height: 1.33em;text-align: center;}
 h2{font-family: Playfair Display;font-size: 2.25em;font-style: normal;font-weight: 400;line-height: 1.33em;text-align: center;}
 h3{font-family: Playfair Display;font-size: 1.5em;font-style: normal;font-weight: 400;line-height: 1.33em;text-align: center;}
-h4{font-family: Lato;font-size: 0.875em;font-style: normal;font-weight: 500;line-height: 1.33em;letter-spacing: 0.16em;text-align: center;}
+h4{font-family: Lato;font-size: 0.875em;font-style: normal;font-weight: 600;line-height: 1.33em;letter-spacing: 0.16em;text-align: center;}
 h5{font-family: Lato;font-size: 0.875em;font-style: normal;font-weight: 300;line-height: 1.33em;letter-spacing: 0.16em;text-align: center;}
 h6{font-size:1.8em; line-height:1.8em; font-weight:bold; margin:0 0 0.8em 0;}
 ul{margin:0 0 0.8em 0; font-size: 1.125em;font-style: normal;font-weight: 400;line-height: 1.9em;letter-spacing: 0em;}
@@ -63,6 +63,7 @@ ol{margin:0 0 0.8em 0; font-size: 1.125em;font-style: normal;font-weight: 400;li
 ol li{margin:0 0 0 2em;}
 /*Global stlyes end*/
 
+/*http://msu.exxite.hu/index01.html*/
 body{padding:0; margin:0;}
 div.main_container{position:relative; width:100%; background:#fff; margin:0 auto;}
 div.header_container{border-bottom:1px solid #000;}
@@ -71,7 +72,19 @@ div.header a{grid-column-start:2; grid-column-end:3;}
 svg.vogue_logo{width:12vw;}
 div.header_navigation_links{grid-column-start:2; grid-column-end:3; display:flex; justify-content:space-between; font-size: 1em;font-style: normal;font-weight:300; line-height:1.88em; letter-spacing:0.16em; text-align:center;}
 div.body_container{min-height:400px;}
-div.body_grid{display:grid; max-width:1000px; grid-template-columns:2vw 1fr 1fr 1fr 2vw; margin:0 auto;}
+div.body_grid{display:grid; max-width:1000px; grid-template-columns:2vw 1fr 2vw; margin:0 auto;}
+div.section_name{grid-column-start:2; grid-column-end:3; margin-top:2vw;}
+div.layout_2-1{text-align:center; max-width:100%; padding:2vw 0 8vw 0; border-bottom:1px solid black; display:grid; grid-template-columns:2fr 1fr; grid-column-gap:2vw; grid-column-start:2; grid-column-end:3;}
+div.small_link{min-height:100px; grid-column-start:2; grid-column-end:3; margin-bottom:2vw;}
+div.medium_link{min-height:200px; grid-column-start:1; grid-column-end:2;}
+div.medium_link img,div.medium_link h2,div.medium_link h4,div.medium_link h5{margin-bottom:1em;}
+div img{max-width:100%;}
+@media only screen and (max-width: 700px) {
+	div.layout_2-1{grid-template-columns:1fr;}
+	div.small_link{grid-column-start:auto; grid-column-end:auto;}
+	div.small_link_container{display:grid; grid-template-columns:1fr 1fr; grid-column-gap:2vw;}
+	div.medium_link{grid-column-start:1; grid-column-end:3;}
+}
 div.article_container{grid-column-start:2; grid-column-end:4;}
 
 @media only screen and (max-width: 600px) {
