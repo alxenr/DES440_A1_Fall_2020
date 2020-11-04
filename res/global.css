@@ -65,14 +65,19 @@ ol li{margin:0 0 0 2em;}
 
 /*http://msu.exxite.hu/index01.html*/
 body{padding:0; margin:0;}
-div.menu{position:fixed; left:0; right:0; top:0; bottom:0; height:100%; width:100%; background:black;}
+div.menucontainer{position:fixed; left:0; right:0; top:0; bottom:0; background:black; transition: 0.5s;}
+div.menu{display:grid; margin:3.75vw 0 0 0; grid-template-columns:1fr 1fr 1fr; grid-column-start:2; grid-column-end:3;}
+div.menu h4{color:white; padding:0 0 3vw 0; font-size:1em; text-align:left;}
+div.menu h5{color:white; padding:0 0 2.5vw 0; font-size:0.85em; text-align:left;}
+div.social{max-width:12vw; display:flex; justify-content:space-between;}
+div.social img{height:1.75vw;}
 div.hidden{left:-100%; right:100%;}
-div.maincontainer{display:none; position:relative; width:100%; background:#fff; margin:0 auto;}
+div.maincontainer{position:relative; width:100%; background:#fff; margin:0 auto;}
 div.displaytoggle{display:block;}
 div.header_container{border-bottom:1px solid #000; padding: 1.25vw 0 0.75vw 0;}
 div.header{max-width:1200px; margin:0 auto; display:grid; grid-template-columns:2vw 1fr 2vw;}
 div.vogue_logo_container{grid-column-start:1; grid-column-end:2;}
-div.header_top_line{grid-column-start:2; grid-column-end;3; display:grid; grid-template-columns:auto auto 4vw;}
+div.header_top_line{grid-column-start:2; grid-column-end:3; display:grid; grid-template-columns:auto auto 4vw; margin: 0.5vw 0;}
 a.search_icon{display:block; align-self:center; grid-column-start:2; grid-column-end:3; justify-self:end; width:1.8vw;}
 a.hamburger_icon{display:block; align-self:center; grid-column-start:3; grid-column-end:4; justify-self:end; width:1.8vw;}
 a.vogue_logo_container img{width:12vw;}
@@ -85,17 +90,23 @@ div.body_grid{display:grid; max-width:1200px; grid-template-columns:2vw 1fr 2vw;
 div.section_name{grid-column-start:2; grid-column-end:3; margin-top:2vw;}
 div.layout_large{padding:2vw 0 3vw 0; border-bottom:1px solid black; max-width:100%; grid-column-start:2; grid-column-end:3;}
 div.layout_large div,div.layout_large h4,div.layout_large h5{margin-bottom:.75em;}div.layout_large h2{margin-bottom:.5em;}
+div.layout_3{max-width:100%; padding: 2vw 0 1vw 0; border-bottom:1px solid black; display:grid; grid-template-columns:1fr 1fr 1fr; grid-column-gap:2vw; grid-column-start:2; grid-column-end:3;}
 div.layout_2-1{text-align:center; max-width:100%; padding:2vw 0 1vw 0; border-bottom:1px solid black; display:grid; grid-template-columns:2fr 1fr; grid-column-gap:2vw; grid-column-start:2; grid-column-end:3;}
 div.small_link{min-height:100px; grid-column-start:2; grid-column-end:3; padding-bottom:2vw;}
+div.small_link img{min-height:5vw; object-fit:cover;}
 div.small_link img,div.small_link h3,div.small_link h4,div.small_link h5{margin-bottom:.75em;}
 div.medium_link{min-height:200px; grid-column-start:1; grid-column-end:2;}
 div.medium_link img,div.medium_link h4,div.medium_link h5{margin-bottom:.75em;}div.medium_link h2{margin-bottom:.5em;}
 div.medium_link_container{margin: 0 0 1em 0;}
+div.medium_link_title{display:table-cell; vertical-align:middle; grid-column-start:2; grid-column-end:3; display:flex; height:20vw; flex-direction:column; justify-content: center; height:100%;}
+div.medium_link_title h2{margin-bottom:.5em; display:table-cell; vertical-align:middle;}
+div.medium_link_title h4,div.medium_link_title h5{margin-bottom:.75em; display:table-cell; vertical-align:middle;}
+div.layout_interview{text-align:center; max-width:100%; padding:2vw 0 2.5vw 0; border-bottom:1px solid black; display:grid; grid-template-columns:2fr 1fr; grid-column-gap:2vw; grid-column-start:2; grid-column-end:3;}
 div img{max-width:100%;}
 div.footer_container{border-top:1px solid #000;}
-div.footer{max-width:1200px; margin:0 auto; display:grid; grid-template-columns:2vw 1fr 2vw;}
+div.footer{max-width:1200px; margin:1.5vw auto 1.2vw auto; display:grid; grid-template-columns:2vw 1fr 2vw;}
 div.footer_grid{grid-column-start:2; grid-column-end:3; display:grid; grid-template-columns:auto auto; grid-template-rows:auto auto;}
-div.footer_grid img{width:8vw;}
+div.footer_grid img{width:8vw; margin: 0 0 1vw 0;}
 div.footer_grid h5{grid-column-start:1; grid-column-end:2; grid-row-start:2; grid-row-start:3; justify-self:start;}
 @media only screen and (max-width: 700px) {
 	div.layout_2-1{grid-template-columns:1fr;}
