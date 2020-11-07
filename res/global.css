@@ -49,7 +49,7 @@ table {
 
 /* My styles begin*/
 /*Global styles being*/
-body{font-family:'Lato','Arial','Helvetica','Roboto', sans-serif; font-size:min(max(0.8em, 1.2vw), 1.2em);} /*min(max(minimum value, responsive value), maximum value)*/
+body{font-family:'Lato','Arial','Helvetica','Roboto', sans-serif; font-size:min(max(0.8em, 1.2vw), 1.2em); color:black;} /*min(max(minimum value, responsive value), maximum value)*/
 p{font-family: Lato;font-size: 1.125em;font-style: normal;font-weight: 400;line-height: 1.9em;letter-spacing: 0em;text-align: justified;}
 h1{font-family: Playfair Display;font-size: 3em;font-style: normal;font-weight: 400;line-height: 1.33em;text-align: center;}
 h2{font-family: Playfair Display;font-size: 2.3em;font-style: normal;font-weight: 400;line-height: 1.33em;text-align: center;}
@@ -103,6 +103,18 @@ div.medium_link_title h2{margin-bottom:.5em; display:table-cell; vertical-align:
 div.medium_link_title h4,div.medium_link_title h5{margin-bottom:.75em; display:table-cell; vertical-align:middle;}
 div.layout_interview{text-align:center; max-width:100%; padding:2vw 0 2.5vw 0; border-bottom:1px solid black; display:grid; grid-template-columns:2fr 1fr; grid-column-gap:2vw; grid-column-start:2; grid-column-end:3;}
 div img{max-width:100%;}
+div.newsletter{text-align:center; max-width:100%; border-bottom:1px solid black; grid-column-start:2; grid-column-end:3;}
+div.newsletter h2{max-width:22ch; margin:1vw auto 1.5vw auto;}
+div.newsletter_form{text-align:left; padding-left:0.75vw; display:flex; align-items:center; height:2.5vw; max-width:24vw; margin:1vw auto 2vw auto; border:1px solid black;}
+div.newsletter_form p{color:grey; font-style:italic; font-size:1em}
+div.addl_links{max-width:100%; padding: 1.5vw 0 1vw 0; display:grid; grid-template-columns:1fr 1fr 1fr; grid-column-gap:2vw; grid-column-start:2; grid-column-end:3;}
+div.addl_links_link{padding-bottom:2vw;}
+div.addl_links_link img{min-height:5vw; object-fit:cover;}
+div.addl_links_link img,div.addl_links_link h3,div.addl_links_link h4,div.addl_links_link h5{margin-bottom:.75em;}
+div.see_more{grid-column-start:2; grid-column-end:3;margin-bottom:1.65vw;}
+div.see_more h4{text-decoration-line:underline; text-decoration:none;}
+div.see_more a:link{color:black;}
+div.see_more a:visited{color:black; text-decoration:none;}
 div.footer_container{border-top:1px solid #000;}
 div.footer{max-width:1200px; margin:1.5vw auto 1.2vw auto; display:grid; grid-template-columns:2vw 1fr 2vw;}
 div.footer_grid{grid-column-start:2; grid-column-end:3; display:grid; grid-template-columns:auto auto; grid-template-rows:auto auto;}
