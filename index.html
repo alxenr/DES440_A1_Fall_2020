@@ -13,6 +13,33 @@
     {
       $('.maincontainer').toggleClass('displaytoggle');
     }
+    function resizeGridItem(item){
+      grid = document.getElementsByClassName("addl_links_js")[0];
+      rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
+      rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap'));
+      rowSpan = Math.ceil((item.querySelector('.content').getBoundingClientRect().height+rowGap)/(rowHeight+rowGap));
+    item.style.gridRowEnd = "span "+rowSpan;
+    }
+
+    function resizeAllGridItems(){
+      allItems = document.getElementsByClassName("item");
+      for(x=0;x<allItems.length;x++){
+        resizeGridItem(allItems[x]);
+      }
+    }
+
+    function resizeInstance(instance){
+    	item = instance.elements[0];
+      resizeGridItem(item);
+    }
+
+    /*$(document).ready(function(){resizeAllGridItems();});
+    window.addEventListener("resize", resizeAllGridItems);
+
+    allItems = document.getElementsByClassName("item");
+    for(x=0;x<allItems.length;x++){
+      imagesLoaded( allItems[x], resizeInstance);
+    }*/
   </script><!--menu is clickable hanburger icon, hidden is class with display:none. transition: parent:transition:all 0.5s; child:div.hidden{left:-100%; right:100%;}-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -115,42 +142,54 @@
           <div class="newsletter_form"><p>enter your email address</p></div>
         </div>
         <div class="section_name"><h4>ADDITIONAL STORIES</h4></div>
-        <div class="addl_links_flex">    
-            <div class="addl_links_link">
-              <img src="res/pexels-thor-garlan-3431579.jpg">
-              <h3>Meet Georgina Hálfdan, This Week’s Designer</h3>
-              <h4>BY <span style="color:#AB0000">MARTIN LUDOVICO</span></h4>
-              <h5>September 21, 2020</h5>
+        <div class="addl_links_js" id="addl_links">
+            <div class="addl_links_link item">
+              <div class="content">
+                <img src="res/pexels-thor-garlan-3431579.jpg">
+                <h3>Meet Georgina Hálfdan, This Week’s Designer</h3>
+                <h4>BY <span style="color:#AB0000">MARTIN LUDOVICO</span></h4>
+                <h5>September 21, 2020</h5>
+              </div>
             </div>
-            <div class="addl_links_link">
-              <img src="res/pexels-anastasiya-lobanovskaya-1035683.jpg">
-              <h3>This Week’s Hottest Designer Accessories</h3>
-              <h4>BY <span style="color:#AB0000">NABOPOLASSAR IUDICAEL</span></h4>
-              <h5>September 5, 2020</h5>
+            <div class="addl_links_link item">
+              <div class="content">
+                <img src="res/pexels-anastasiya-lobanovskaya-1035683.jpg">
+                <h3>This Week’s Hottest Designer Accessories</h3>
+                <h4>BY <span style="color:#AB0000">NABOPOLASSAR IUDICAEL</span></h4>
+                <h5>September 5, 2020</h5>
+              </div>
             </div>
-            <div class="addl_links_link">
-              <img src="res/pexels-yuri-manei-2235071.jpg">
-              <h3>Top 20 Dresses for the Fall</h3>
-              <h4>BY <span style="color:#AB0000">AMIRANI OLEGARIO</span></h4>
-              <h5>September 19, 2020</h5>
+            <div class="addl_links_link item">
+              <div class="content">
+                <img src="res/pexels-yuri-manei-2235071.jpg">
+                <h3>Top 20 Dresses for the Fall</h3>
+                <h4>BY <span style="color:#AB0000">AMIRANI OLEGARIO</span></h4>
+                <h5>September 19, 2020</h5>
+              </div>
             </div>
-            <div class="addl_links_link">
-              <img src="res/pexels-godisable-jacob-914668.jpg">
-              <h3>How to Shoot the Best Instagram Photos</h3>
-              <h4>BY <span style="color:#AB0000">APOLONIJA KARAN</span></h4>
-              <h5>August 27, 2020</h5>
+            <div class="addl_links_link item">
+              <div class="content">
+                <img src="res/pexels-godisable-jacob-914668.jpg">
+                <h3>How to Shoot the Best Instagram Photos</h3>
+                <h4>BY <span style="color:#AB0000">APOLONIJA KARAN</span></h4>
+                <h5>August 27, 2020</h5>
+              </div>
             </div>
-            <div class="addl_links_link">
-              <img src="res/pexels-hải-nguyễn-4034532.jpg">
-              <h3>Davinia Aimi Explains: Portrait Photography</h3>
-              <h4>BY <span style="color:#AB0000">SHAHNOZA ZOTIKOS</span></h4>
-              <h5>September 16, 2020</h5>
+            <div class="addl_links_link item">
+              <div class="content">
+                <img src="res/pexels-hải-nguyễn-4034532.jpg">
+                <h3>Davinia Aimi Explains: Portrait Photography</h3>
+                <h4>BY <span style="color:#AB0000">SHAHNOZA ZOTIKOS</span></h4>
+                <h5>September 16, 2020</h5>
+              </div>
             </div>
-            <div class="addl_links_link">
-              <img src="res/pexels-wherbson-rodrigues-4226939.jpg">
-              <h3>The Best Street Style From Springfield</h3>
-              <h4>BY <span style="color:#AB0000">AHMADU HERK</span></h4>
-              <h5>August 8, 2020</h5>
+            <div class="addl_links_link item">
+              <div class="content">
+                <img src="res/pexels-wherbson-rodrigues-4226939.jpg">
+                <h3>The Best Street Style From Springfield</h3>
+                <h4>BY <span style="color:#AB0000">AHMADU HERK</span></h4>
+                <h5>August 8, 2020</h5>
+              </div>
             </div>
           <div class="see_more"><a href="#"><h4>SEE MORE</h4></a></div>
         </div>
