@@ -50,7 +50,7 @@ table {
 /* My styles begin*/
 /*Global styles being*/
 body{font-family:'Lato','Arial','Helvetica','Roboto', sans-serif; font-size:min(max(0.8em, 1.2vw), 1.2em); color:black;} /*min(max(minimum value, responsive value), maximum value)*/
-p{font-family: Lato;font-size: 1.125em;font-style: normal;font-weight: 400;line-height: 1.9em;letter-spacing: 0em;text-align: justified; font-variant-numeric: oldstyle-nums;}
+p{font-family: Lato;font-size: 1.125em;font-style: normal;font-weight: 400;line-height: 2.1em;letter-spacing: 0em;text-align: justified; font-variant-numeric: oldstyle-nums;}
 h1{font-family: Playfair Display;font-size: 3em;font-style: normal;font-weight: 400;line-height: 1.33em;text-align: center;}
 h2{font-family: Playfair Display;font-size: 2.3em;font-style: normal;font-weight: 400;line-height: 1.33em;text-align: center;}
 h3{font-family: Playfair Display;font-size: 1.25em;font-style: normal;font-weight: 400;line-height: 1.33em;text-align: center;}
@@ -112,7 +112,7 @@ div.medium_link_title h4,div.medium_link_title h5{margin-bottom:.75em; display:t
 div.layout_interview{text-align:center; max-width:100%; padding:2vw 0 2.5vw 0; border-bottom:1px solid black; display:grid; grid-template-columns:2fr 1fr; grid-column-gap:2vw; grid-column-start:2; grid-column-end:3;}
 div img{max-width:100%;}
 div.newsletter{text-align:center; max-width:100%; border-bottom:1px solid black; grid-column-start:2; grid-column-end:3;}
-div.newsletter.leftalign{text-align:left; margin:1vw 0 1.5vw 0;}
+div.newsletter.leftalign{text-align:left; margin:1vw 0 1.5vw 0; padding-bottom:0.85vw;}
 div.newsletter h2{max-width:22ch; margin:1vw auto 1.5vw auto;}
 div.newsletter.leftalign h2{text-align:left; margin:1vw 0 1.5vw 0;}
 div.newsletter_form{text-align:left; padding-left:0.75vw; display:flex; align-items:center; height:2.5vw; max-width:24vw; margin:1vw auto 2vw auto; border:1px solid black;}
@@ -120,13 +120,13 @@ div.newsletter_form p{color:grey; font-style:italic; font-size:1em}
 div.newsletter_form.leftalign{margin:1vw 0 2vw 0;}
 /*article editing*/
 div.article_container{grid-column-start:2; grid-column-end:3; display:grid; grid-template-columns:1fr 1fr 1fr;}
-div.article{grid-column-start:1; grid-column-end:3; border-bottom:1px solid black;}
-div.article p{text-align:justify;}
-div.article h2{padding-bottom:2vw; border-bottom:1px solid black; text-align:left;}
-div.article h4{text-transform:uppercase; text-align:left;}
-div.article h5{text-align:left;}
+div.article{grid-column-start:1; grid-column-end:3; border-bottom:1px solid black; padding-bottom:2vw;}
+div.article p{text-align:justify; padding-bottom:0.5vw;}
+div.article h2{padding-bottom:1vw; border-bottom:1px solid black; text-align:left; margin-top:0.8vw;}
+div.article h4{text-transform:uppercase; text-align:left; margin-top:1.25vw;}
+div.article h5{text-align:left; margin-top:0.35vw;}
 div.article img{max-height:65vh;}
-div.img_container{text-align:left;}
+div.img_container{text-align:left; margin:2vw 0;}
 /*addl links*/
 div.addl_links{max-width:100%; padding: 1.5vw 0 1vw 0; display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); grid-column-gap:2vw; grid-column-start:2; grid-column-end:3;}
 div.addl_links_js{grid-column-start:2; grid-column-end:3; display:grid; grid-gap: 2vw; grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); grid-auto-rows:20px;}
@@ -160,6 +160,9 @@ div.footer_grid h5{grid-column-start:1; grid-column-end:2; grid-row-start:2; gri
 	a.search_icon{display:none;}
 	a.hamburger_icon{grid-column-start:3; grid-column-end:4; width:3.6vw;}
 	div.small_link_container{grid-template-columns:1fr;}
+	div.newsletter.leftalign{text-align:center; margin:1vw 0 1.5vw 0;}
+	div.newsletter.leftalign h2{text-align:center;  margin:1vw auto 1.5vw auto;}
+	div.newsletter_form.leftalign{margin:1vw auto 2vw auto; height:4.5vw; max-width:48vw;}
 }
 
 
