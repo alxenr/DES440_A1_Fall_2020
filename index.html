@@ -33,13 +33,13 @@
       resizeGridItem(item);
     }
 
-    /*$(document).ready(function(){resizeAllGridItems();});
+    $(document).ready(function(){resizeAllGridItems();});
     window.addEventListener("resize", resizeAllGridItems);
 
     allItems = document.getElementsByClassName("item");
     for(x=0;x<allItems.length;x++){
       imagesLoaded( allItems[x], resizeInstance);
-    }*/
+    }
   </script><!--menu is clickable hanburger icon, hidden is class with display:none. transition: parent:transition:all 0.5s; child:div.hidden{left:-100%; right:100%;}-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -139,7 +139,11 @@
         </div>
         <div class="newsletter">
           <h2>Sign up for our email newsletter</h2>
-          <div class="newsletter_form"><p>enter your email address</p></div>
+          <div class="newsletter_form">
+            <form action="#">
+            <input type="text" name="email" placeholder="enter your email address">
+            </form>
+          </div>
         </div>
         <div class="section_name"><h4>ADDITIONAL STORIES</h4></div>
         <div class="addl_links_js" id="addl_links">
@@ -191,8 +195,8 @@
                 <h5>August 8, 2020</h5>
               </div>
             </div>
-          <div class="see_more"><a href="#"><h4>SEE MORE</h4></a></div>
         </div>
+        <a class="see_more" href="#">SEE MORE</a>
         <!--<div class="addl_links">
           <div class="addl_links_column">
             <div class="addl_links_link">
@@ -245,13 +249,13 @@
     <div class="footer_container">
       <div class="footer">
         <div class="footer_grid">
-          <img src="res/vogue_logo.svg">
+          <img class="vogueicon" src="res/vogue_logo.svg">
           <h5>© 2020 Vogue. All Rights Reserved.</h5>
-          <div class="social" style="grid-column-start:2; grid-column-end:3; justify-self: end;">
-            <a href="#"><img src="res/06-facebook.svg"></a>
-            <a href="#"><img src="res/03-twitter.svg"></a>
-            <a href="#"><img src="res/38-instagram.svg"></a>
-            <a href="#"><img src="res/33-pinterest.svg"></a>
+          <div class="social socialfooter">
+            <a href="#"><img class="icon" src="res/06-facebook.svg"></a>
+            <a href="#"><img class="icon" src="res/03-twitter.svg"></a>
+            <a href="#"><img class="icon" src="res/38-instagram.svg"></a>
+            <a href="#"><img class="icon" src="res/33-pinterest.svg"></a>
           </div>
         </div>
       </div>
@@ -272,17 +276,17 @@
     </div>
     <div class="body_grid">
       <div class="menu">
-        <div class="menucolumn" style="grid-column-start:1; grid-column-end:2;">
-          <h5>ABOUT</h5>
-          <h5>SHOP</h5>
+        <div class="menucolumn regular">
+          <h4>ABOUT</h4>
+          <h4>SHOP</h4>
           <div class="social">
-            <a href="#"><img src="res/06-facebook.svg"></a>
-            <a href="#"><img src="res/03-twitter.svg"></a>
-            <a href="#"><img src="res/38-instagram.svg"></a>
-            <a href="#"><img src="res/33-pinterest.svg"></a>
+            <a href="#"><img class="icon" src="res/06-facebook.svg"></a>
+            <a href="#"><img class="icon" src="res/03-twitter.svg"></a>
+            <a href="#"><img class="icon" src="res/38-instagram.svg"></a>
+            <a href="#"><img class="icon" src="res/33-pinterest.svg"></a>
           </div>
         </div>
-        <div class="menucolumn" style="grid-column-start:2; grid-column-end:3;">
+        <div class="menucolumn">
           <h4>FASHION</h4>
           <h4>BEAUTY</h4>
           <h4>CULTURE</h4>
@@ -291,12 +295,12 @@
           <h4>VIDEO</h4>
           <h4>HOPE</h4>
         </div>
-        <div class="menucolumn" style="grid-column-start:3; grid-column-end:4;">
-          <h5>NEWSLETTER</h5>
-          <h5>PODCAST</h5>
-          <h5>ARCHIVE</h5>
-          <h5>VOGUE APP</h5>
-          <h5 style="font-size:0.7em; padding:0 0 2vw 0;">© 2020 Vogue. All Rights Reserved.</h5>
+        <div class="menucolumn regular">
+          <h4>NEWSLETTER</h4>
+          <h4>PODCAST</h4>
+          <h4>ARCHIVE</h4>
+          <h4>VOGUE APP</h4>
+          <h5>© 2020 Vogue. All Rights Reserved.</h5>
         </div>
       </div>
     </div>
